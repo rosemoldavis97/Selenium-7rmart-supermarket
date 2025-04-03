@@ -23,8 +23,8 @@ public class CategoryPageTest extends Base {
 		loginpage.enterUsernameAndPassword(username,password);
 		homepage = loginpage.clickSignin();
 		categorypage = homepage.clickCategoryIcon();
-		//String category=ExcelUtility.readString(1, 2, "CategoryPage");
-		String category=fakerutility.getMaterial();
+		String category=ExcelUtility.readString(1, 2, "CategoryPage");
+		//String category=fakerutility.getMaterial();
 		categorypage.clickNewButton().enterCategoryInformation(category).clickSaveButton();
 
 		boolean expected = categorypage.isAlertMessageShownSuccess();

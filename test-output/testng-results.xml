@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-02T21:16:34 IST" name="Default suite" finished-at="2025-04-02T21:16:44 IST" duration-ms="9601">
+  <suite started-at="2025-04-03T17:12:25 IST" name="Default suite" finished-at="2025-04-03T17:12:48 IST" duration-ms="22144">
     <groups>
     </groups>
-    <test started-at="2025-04-02T21:16:34 IST" name="Default test" finished-at="2025-04-02T21:16:44 IST" duration-ms="9601">
-      <class name="com.obsqura.rmart_supermarket.Testscript.ManageNewsPageTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.obsqura.rmart_supermarket.Testscript.ManageNewsPageTest@3857f613]" started-at="2025-04-02T21:16:34 IST" name="beforeMethod" finished-at="2025-04-02T21:16:39 IST" duration-ms="4328" status="PASS">
+    <test started-at="2025-04-03T17:12:25 IST" name="Default test" finished-at="2025-04-03T17:12:48 IST" duration-ms="22144">
+      <class name="com.obsqura.rmart_supermarket.Testscript.AdminUsersPageTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.obsqura.rmart_supermarket.Testscript.AdminUsersPageTest@3bf7ca37]" started-at="2025-04-03T17:12:26 IST" name="beforeMethod" finished-at="2025-04-03T17:12:36 IST" duration-ms="10036" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUserCanEnterTheNewsInformation()[pri:0, instance:com.obsqura.rmart_supermarket.Testscript.ManageNewsPageTest@3857f613]" started-at="2025-04-02T21:16:39 IST" name="verifyUserCanEnterTheNewsInformation" finished-at="2025-04-02T21:16:44 IST" duration-ms="4901" status="PASS">
+        <test-method signature="verifyUserCanCreateNewAdminUser()[pri:0, instance:com.obsqura.rmart_supermarket.Testscript.AdminUsersPageTest@3bf7ca37]" started-at="2025-04-03T17:12:36 IST" name="verifyUserCanCreateNewAdminUser" finished-at="2025-04-03T17:12:47 IST" duration-ms="11744" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserCanEnterTheNewsInformation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmart_supermarket.Testscript.ManageNewsPageTest@3857f613]" started-at="2025-04-02T21:16:44 IST" name="afterMethod" finished-at="2025-04-02T21:16:44 IST" duration-ms="300" status="PASS">
+        </test-method> <!-- verifyUserCanCreateNewAdminUser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmart_supermarket.Testscript.AdminUsersPageTest@3bf7ca37]" started-at="2025-04-03T17:12:47 IST" name="afterMethod" finished-at="2025-04-03T17:12:48 IST" duration-ms="284" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserCanEnterTheNewsInformation status=SUCCESS method=ManageNewsPageTest.verifyUserCanEnterTheNewsInformation()[pri:0, instance:com.obsqura.rmart_supermarket.Testscript.ManageNewsPageTest@3857f613] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserCanCreateNewAdminUser status=SUCCESS method=AdminUsersPageTest.verifyUserCanCreateNewAdminUser()[pri:0, instance:com.obsqura.rmart_supermarket.Testscript.AdminUsersPageTest@3bf7ca37] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.obsqura.rmart_supermarket.Testscript.ManageNewsPageTest -->
+      </class> <!-- com.obsqura.rmart_supermarket.Testscript.AdminUsersPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

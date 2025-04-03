@@ -49,7 +49,7 @@ public class CategoryPage {
 		fileuploadutility.sendKeysForFileUpload(chooseFile, Constant.IMAGE);
 		pageutility.JavaScriptExecutor(driver, noButton1);
 		waitutility.elementToBeClickable(driver,noButton1);
-		noButton1.click();
+		//noButton1.click();
 		return this;
 	}
 	public CategoryPage clickSaveButton() {
