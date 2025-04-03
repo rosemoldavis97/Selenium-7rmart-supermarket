@@ -6,6 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.obsqura.rmart.constant.Constant;
+import com.obsqura.rmart.utilities.ExcelUtility;
 import com.obsqura.rmart_supermarketPages.HomePage;
 import com.obsqura.rmart_supermarketPages.LoginPage;
 
@@ -13,9 +14,11 @@ public class LoginPageTest extends Base {
 	public HomePage homepage;
 
 	@Test
-	public void validUsernameAndPassword() {
+	public void validUsernameAndPassword() throws Exception {
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameAndPassword("admin", "admin");
+		String username=ExcelUtility.readString(1, 0, "LoginPage");
+		String password=ExcelUtility.readString(1, 1, "LoginPage");	
+		loginpage.enterUsernameAndPassword(username, password);
 		homepage = loginpage.clickSignin();
 
 		String expected = "Dashboard | 7rmart supermarket";
@@ -25,9 +28,11 @@ public class LoginPageTest extends Base {
 	}
 
 	@Test
-	public void invalidUsernameAndValidPassword() {
+	public void invalidUsernameAndValidPassword() throws Exception {
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameAndPassword("rose", "admin");
+		String username=ExcelUtility.readString(2, 0, "LoginPage");
+		String password=ExcelUtility.readString(2, 1, "LoginPage");	
+		loginpage.enterUsernameAndPassword(username, password);
 		homepage = loginpage.clickSignin();
 
 		boolean isloginpage = loginpage.isMessageIsDisplayed();

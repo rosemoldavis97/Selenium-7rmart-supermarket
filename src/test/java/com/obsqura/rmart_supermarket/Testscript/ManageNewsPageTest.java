@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.obsqura.rmart.constant.Constant;
+import com.obsqura.rmart.utilities.ExcelUtility;
 import com.obsqura.rmart_supermarketPages.HomePage;
 import com.obsqura.rmart_supermarketPages.LoginPage;
 import com.obsqura.rmart_supermarketPages.ManageNewsPage;
@@ -13,12 +14,15 @@ public class ManageNewsPageTest extends Base {
 	public ManageNewsPage managenewspage;
 
 	@Test
-	public void verifyUserCanEnterTheNewsInformation() {
+	public void verifyUserCanEnterTheNewsInformation() throws Exception {
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameAndPassword("admin", "admin");
+		String username = ExcelUtility.readString(1, 0, "ManageNewsPage");
+		String password = ExcelUtility.readString(1, 1, "ManageNewsPage");
+		loginpage.enterUsernameAndPassword(username, password);
 		homepage = loginpage.clickSignin();
 		managenewspage = homepage.clickManageNews();
-		managenewspage.clickNewButton().enterTheNews("20% discount for fruits").clickSaveButton();
+		String news = ExcelUtility.readString(1, 2, "ManageNewsPage");
+		managenewspage.clickNewButton().enterTheNews(news).clickSaveButton();
 
 		boolean expected = managenewspage.isAlertMessageShownSuccess();
 		Assert.assertTrue(expected, Constant.ERRORMESSAGEFORUSERCANCREATENEWS);

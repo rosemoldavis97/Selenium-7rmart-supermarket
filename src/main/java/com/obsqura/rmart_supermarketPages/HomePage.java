@@ -23,9 +23,15 @@ public class HomePage {
 	WebElement category;
 	@FindBy(xpath = "(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'])[2]")
 	WebElement manageNews;
-	@FindBy(xpath = "(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category'])[2]")
+	@FindBy(xpath = "(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category'])")
 	WebElement subCategory;
-
+	@FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext'])[2]")
+	WebElement footer;
+	@FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-product'])[4]")
+	WebElement manageProduct;
+	@FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact'])[2]")
+	WebElement manageContact;
+	
 	public HomePage clickAdmin() {
 		admin.click();
 		return this;
@@ -54,6 +60,21 @@ public class HomePage {
 	public SubCategoryPage clickSubCategory() {
 		subCategory.click();
 		return new SubCategoryPage(driver);
+	}
+	
+	public ManageFooterTextPage clickManageFooterText() {
+		footer.click();
+		return new ManageFooterTextPage(driver);
+	}
+	
+	public ManageProductPage clickManageProduct() {
+		manageProduct.click();
+		return new ManageProductPage(driver);
+	}
+	
+	public ManageContactPage clickManageContact() {
+		manageContact.click();
+		return new ManageContactPage(driver);
 	}
 
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.obsrura.rmart.generateReport.Listeners"></listener>
+	</listeners>
+	<parameter name="username" value="admin"></parameter>
+	<parameter name="password" value="123"></parameter>
+	<test thread-count="5" name="ExtendReport.xml">
+		<classes>
+			<class name="com.obsqura.rmart_supermarket.Testscript.LoginPageTest"></class>
+		</classes>
+	</test>
+</suite>

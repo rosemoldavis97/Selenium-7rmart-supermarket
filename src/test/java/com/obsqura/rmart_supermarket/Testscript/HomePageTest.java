@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.obsqura.rmart.constant.Constant;
+import com.obsqura.rmart.utilities.ExcelUtility;
 import com.obsqura.rmart_supermarketPages.HomePage;
 import com.obsqura.rmart_supermarketPages.LoginPage;
 
@@ -11,9 +12,11 @@ public class HomePageTest extends Base {
 	public HomePage homepage;
 
 	@Test
-	public void verifyUserCanLogout() {
+	public void verifyUserCanLogout() throws Exception {
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameAndPassword("admin", "admin");
+		String username = ExcelUtility.readString(1, 0, "HomePage");
+		String password = ExcelUtility.readString(1, 1, "HomePage");
+		loginpage.enterUsernameAndPassword(username, password);
 		homepage = loginpage.clickSignin();
 		homepage.clickAdmin().clickLogout();
 

@@ -6,7 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
+import com.obsqura.rmart.constant.Constant;
+import com.obsqura.rmart.utilities.FileUploadUtility;
 import com.obsqura.rmart.utilities.PageUtility;
 import com.obsqura.rmart.utilities.WaitUtility;
 
@@ -43,13 +44,17 @@ public class CategoryPage {
 	public CategoryPage enterCategoryInformation(String category) {
 		categoryField.sendKeys(category);
 		discount.click();
-		chooseFile.sendKeys("C:\\Users\\User\\Desktop\\Capture.png");
+		
+		FileUploadUtility fileuploadutility=new FileUploadUtility();
+		fileuploadutility.sendKeysForFileUpload(chooseFile, Constant.IMAGE);
 		pageutility.JavaScriptExecutor(driver, noButton1);
 		waitutility.elementToBeClickable(driver,noButton1);
 		noButton1.click();
 		return this;
 	}
 	public CategoryPage clickSaveButton() {
+		pageutility.JavaScriptExecutor(driver, saveButton);
+		waitutility.elementToBeClickable(driver,saveButton);
 		saveButton.click();
 		return this;
 	}
