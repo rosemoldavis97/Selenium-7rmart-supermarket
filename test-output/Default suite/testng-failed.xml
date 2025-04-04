@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsqura.rmart_supermarket.Testscript.AdminUsersPageTest">
+      <class name="com.obsqura.rmart_supermarket.Testscript.HomePageTest">
         <methods>
-          <include name="verifyUserCanCreateNewAdminUser"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
+          <include name="verifyUserCanLogout"/>
         </methods>
-      </class> <!-- com.obsqura.rmart_supermarket.Testscript.AdminUsersPageTest -->
+      </class> <!-- com.obsqura.rmart_supermarket.Testscript.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

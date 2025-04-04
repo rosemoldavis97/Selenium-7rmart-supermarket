@@ -13,7 +13,7 @@ import com.obsqura.rmart_supermarketPages.LoginPage;
 public class LoginPageTest extends Base {
 	public HomePage homepage;
 
-	@Test
+	@Test(groups={"smoke"})
 	public void validUsernameAndPassword() throws Exception {
 		LoginPage loginpage = new LoginPage(driver);
 		String username=ExcelUtility.readString(1, 0, "LoginPage");
@@ -27,7 +27,7 @@ public class LoginPageTest extends Base {
 		Assert.assertEquals(expected, actual,Constant.ERRORMESSAGEFORLOGIN);
 	}
 
-	@Test
+	@Test(groups={"smoke"})
 	public void invalidUsernameAndValidPassword() throws Exception {
 		LoginPage loginpage = new LoginPage(driver);
 		String username=ExcelUtility.readString(2, 0, "LoginPage");

@@ -16,4 +16,7 @@ public class Constant {
 	public static final String ERRORMESSAGEFOREDITINGCONTACTS="update not done successfully";
 	public static final String ERRORMESSAGEFORDELETINGFIRSTADMINUSER="deletion not done successfully";
 	public static final String ERRORMESSAGEFORSEARCHINGEXISTINGADMIN="result not found";
+	public static final String CONFIGFILE=System.getProperty("user.dir")+"//src//main//resources//config.properties";
+	
+	
 }

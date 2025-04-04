@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [multibrowser]" guice-stage="DEVELOPMENT">
+  <parameter name="Browser" value="chrome"/>
+  <test thread-count="5" parallel="classes" name="chrometest(failed)">
+    <classes>
+      <class name="com.obsqura.rmart_supermarket.Testscript.HomePageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyUserCanLogout"/>
+        </methods>
+      </class> <!-- com.obsqura.rmart_supermarket.Testscript.HomePageTest -->
+      <class name="com.obsqura.rmart_supermarket.Testscript.ManageNewsPageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="verifyUserCanEnterTheNewsInformation"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.obsqura.rmart_supermarket.Testscript.ManageNewsPageTest -->
+    </classes>
+  </test> <!-- chrometest(failed) -->
+</suite> <!-- Failed suite [multibrowser] -->
